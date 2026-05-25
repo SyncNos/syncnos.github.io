@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SyncNos · Open source, local-first tools</title>
+    <meta
+      name="description"
+      content="SyncNos builds open source, local-first tools for capturing AI chats, web articles, and video transcripts."
+    />
+    <link rel="icon" href="./assets/icon-128.png" />
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <header class="sn-nav" role="banner">
+      <div class="container sn-nav-inner">
+        <a class="brand" href="./" aria-label="SyncNos home">
+          <div class="brand-mark" aria-hidden="true">
+            <img src="./assets/icon-128.png" alt="" />
+          </div>
+          <div style="min-width: 0">
+            <div class="brand-title">SyncNos</div>
+            <div class="brand-subtitle">
+              <span class="lang-en">Open source · Local-first</span>
+              <span class="lang-zh">开源 · 本地优先</span>
+            </div>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="./webclipper/">
+            <span class="lang-en">WebClipper</span>
+            <span class="lang-zh">WebClipper</span>
+          </a>
+          <a class="nav-link" href="./cli/">
+            <span class="lang-en">CLI</span>
+            <span class="lang-zh">CLI</span>
+          </a>
+          <a class="nav-link" href="./health/">
+            <span class="lang-en">Health</span>
+            <span class="lang-zh">Health</span>
+          </a>
+          <a class="nav-link" href="https://github.com/SyncNos" target="_blank" rel="noreferrer">
+            <span class="lang-en">GitHub</span>
+            <span class="lang-zh">GitHub</span>
+          </a>
+
+          <div class="lang-pill" role="group" aria-label="Language">
+            <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+            <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="webclipper">
+        <div class="container hero-grid">
+          <div>
+            <div class="badge">
+              <span class="lang-en">Open source · Local-first</span>
+              <span class="lang-zh">开源 · 本地优先</span>
+            </div>
+
+            <h1>
+              <span class="lang-en">Never lose what you read, watch, or chat.</span>
+              <span class="lang-zh">你问过的、看过的、听过的，都不该丢。</span>
+            </h1>
+
+            <p class="lede">
+              <span class="lang-en"
+                >SyncNos WebClipper captures AI chats, web articles, and video transcripts in the background, stores them
+                in your browser first, then lets you sync or export on your terms.</span
+              >
+              <span class="lang-zh"
+                >SyncNos WebClipper 在后台采集 AI 对话、网页长文与视频字幕：先落浏览器本地事实源，再由你决定同步或导出。</span
+              >
+            </p>
+
+            <div class="hero-actions">
+              <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Webclipper" target="_blank" rel="noreferrer">
+                <span class="lang-en">View WebClipper on GitHub</span>
+                <span class="lang-zh">去 GitHub 看 WebClipper</span>
+              </a>
+              <a class="sn-btn sn-btn--ghost" href="./webclipper/">
+                <span class="lang-en">Product page</span>
+                <span class="lang-zh">产品页</span>
+              </a>
+            </div>
+
+            <div class="kpis" aria-label="Key claims">
+              <div class="kpi">
+                <div class="label">
+                  <span class="lang-en">DATA OWNERSHIP</span>
+                  <span class="lang-zh">数据归属</span>
+                </div>
+                <div class="value">
+                  <span class="lang-en">Stored in your browser (IndexedDB) first.</span>
+                  <span class="lang-zh">先存浏览器本地（IndexedDB）。</span>
+                </div>
+              </div>
+              <div class="kpi">
+                <div class="label">
+                  <span class="lang-en">NO LOCK-IN</span>
+                  <span class="lang-zh">不绑架</span>
+                </div>
+                <div class="value">
+                  <span class="lang-en">Sync to Notion / Obsidian / Feishu, or export Markdown / Zip.</span>
+                  <span class="lang-zh">Notion / Obsidian / 飞书同步，或导出 Markdown / Zip。</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="proof" aria-label="Product screenshots">
+            <div class="stack">
+              <img class="shot primary" src="./assets/popup-screenshots.png" alt="WebClipper popup screenshots" />
+              <img class="shot secondary" src="./assets/setting-screenshots.png" alt="Settings screenshots" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <div class="container split">
+          <div>
+            <h2 class="section-title">
+              <span class="lang-en">Open source is a UX feature.</span>
+              <span class="lang-zh">开源，是一种体验。</span>
+            </h2>
+            <p class="muted" style="margin: 0; max-width: 70ch">
+              <span class="lang-en"
+                >A web clipper touches the most private part of your life: what you read, watch, and ask. SyncNos is
+                designed so you can trust it—by verifying it.</span
+              >
+              <span class="lang-zh"
+                >WebClipper 触碰的是你最私密的内容：读过什么、看过什么、问过什么。SyncNos 的信任建立在“可验证”之上。</span
+              >
+            </p>
+            <div class="hero-actions" style="margin-top: 14px">
+              <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Webclipper" target="_blank" rel="noreferrer">
+                <span class="lang-en">Star on GitHub</span>
+                <span class="lang-zh">去 GitHub 点 Star</span>
+              </a>
+              <a class="sn-btn" href="https://github.com/SyncNos/SyncNos-Webclipper#readme" target="_blank" rel="noreferrer">
+                <span class="lang-en">Read README</span>
+                <span class="lang-zh">看 README</span>
+              </a>
+            </div>
+          </div>
+          <ul class="list" aria-label="Trust points">
+            <li>
+              <div class="t">
+                <span class="lang-en">Local-first by default</span>
+                <span class="lang-zh">默认本地优先</span>
+              </div>
+              <div class="d">
+                <span class="lang-en">Your content lands locally first—then you decide where it goes.</span>
+                <span class="lang-zh">内容先落本地，再由你决定去向。</span>
+              </div>
+            </li>
+            <li>
+              <div class="t">
+                <span class="lang-en">Incremental sync</span>
+                <span class="lang-zh">增量同步</span>
+              </div>
+              <div class="d">
+                <span class="lang-en">Only new content gets synced—avoid duplicates, avoid missing gaps.</span>
+                <span class="lang-zh">只同步新内容：不重复，也不遗漏。</span>
+              </div>
+            </li>
+            <li>
+              <div class="t">
+                <span class="lang-en">Auditable behavior</span>
+                <span class="lang-zh">行为可审计</span>
+              </div>
+              <div class="d">
+                <span class="lang-en">Every line is inspectable. No black box.</span>
+                <span class="lang-zh">每一行都能看见，没有黑箱。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="lang-en">Products</span>
+            <span class="lang-zh">产品</span>
+          </h2>
+          <p class="muted" style="margin: 0 0 16px; max-width: 78ch">
+            <span class="lang-en"
+              >SyncNos is evolving into a small family of tools. WebClipper is the main product today; others are early
+              previews.</span
+            >
+            <span class="lang-zh">SyncNos 正在变成一组小而坚实的工具。当前以 WebClipper 为主，其它产品先作为预告入口。</span>
+          </p>
+
+          <div class="products">
+            <article class="card p-card" aria-label="SyncNos WebClipper">
+              <div class="p-head">
+                <div>
+                  <div class="p-title">SyncNos WebClipper</div>
+                  <div class="muted" style="font-size: 12px; margin-top: 3px">
+                    <span class="lang-en">AI chats · Articles · Video transcripts</span>
+                    <span class="lang-zh">AI 对话 · 网页长文 · 视频字幕</span>
+                  </div>
+                </div>
+                <span class="badge">
+                  <span class="lang-en">Main</span>
+                  <span class="lang-zh">主线</span>
+                </span>
+              </div>
+              <div class="p-desc">
+                <span class="lang-en"
+                  >A browser extension that captures content in the background, then syncs/exports on demand.</span
+                >
+                <span class="lang-zh">浏览器扩展：后台采集，本地落库，按需同步/导出。</span>
+              </div>
+              <div class="p-actions">
+                <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Webclipper" target="_blank" rel="noreferrer">
+                  <span class="lang-en">GitHub</span>
+                  <span class="lang-zh">GitHub</span>
+                </a>
+                <a class="sn-btn" href="./webclipper/">
+                  <span class="lang-en">Product</span>
+                  <span class="lang-zh">产品页</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="card p-card" aria-label="SyncNos CLI">
+              <div class="p-head">
+                <div>
+                  <div class="p-title">SyncNos CLI</div>
+                  <div class="muted" style="font-size: 12px; margin-top: 3px">
+                    <span class="lang-en">Preview</span>
+                    <span class="lang-zh">预告</span>
+                  </div>
+                </div>
+                <span class="badge">
+                  <span class="lang-en">Preview</span>
+                  <span class="lang-zh">Preview</span>
+                </span>
+              </div>
+              <div class="p-desc">
+                <span class="lang-en">Repository is live. Expect iteration and frequent change.</span>
+                <span class="lang-zh">仓库已就绪；仍处于快速迭代期。</span>
+              </div>
+              <div class="p-actions">
+                <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-CLI" target="_blank" rel="noreferrer">
+                  <span class="lang-en">GitHub</span>
+                  <span class="lang-zh">GitHub</span>
+                </a>
+                <a class="sn-btn" href="./cli/">
+                  <span class="lang-en">Product</span>
+                  <span class="lang-zh">产品页</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="card p-card" aria-label="SyncNos Health">
+              <div class="p-head">
+                <div>
+                  <div class="p-title">SyncNos Health</div>
+                  <div class="muted" style="font-size: 12px; margin-top: 3px">
+                    <span class="lang-en">Preview</span>
+                    <span class="lang-zh">预告</span>
+                  </div>
+                </div>
+                <span class="badge">
+                  <span class="lang-en">Preview</span>
+                  <span class="lang-zh">Preview</span>
+                </span>
+              </div>
+              <div class="p-desc">
+                <span class="lang-en">Apple clients (early stage). Follow GitHub for the latest status.</span>
+                <span class="lang-zh">Apple 客户端（早期阶段）；进展以 GitHub 为准。</span>
+              </div>
+              <div class="p-actions">
+                <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Apple" target="_blank" rel="noreferrer">
+                  <span class="lang-en">GitHub</span>
+                  <span class="lang-zh">GitHub</span>
+                </a>
+                <a class="sn-btn" href="./health/">
+                  <span class="lang-en">Product</span>
+                  <span class="lang-zh">产品页</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer" role="contentinfo">
+        <div class="container footer-inner">
+          <div class="brand" aria-label="Brand footer">
+            <div class="brand-mark" aria-hidden="true" style="width: 24px; height: 24px">
+              <img src="./assets/icon-128.png" alt="" />
+            </div>
+            <div>
+              <div class="brand-title" style="font-size: 13px">SyncNos</div>
+              <div class="brand-subtitle">
+                <span class="lang-en">Open source tools for knowledge capture.</span>
+                <span class="lang-zh">为知识沉淀而生的开源工具。</span>
+              </div>
+            </div>
+          </div>
+          <div class="fineprint">
+            <span class="lang-en">No background gradients on this site by design. Logo assets may contain gradients.</span>
+            <span class="lang-zh">本页刻意不使用渐变背景；Logo 素材自带渐变不在限制范围内。</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/site.js"></script>
+  </body>
+</html>
+
