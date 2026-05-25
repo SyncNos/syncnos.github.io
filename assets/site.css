@@ -186,8 +186,22 @@ a:hover {
 }
 
 @media (max-width: 860px) {
-  .nav-links .nav-link {
+  .nav-links {
+    gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 6px 0;
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-link {
+    white-space: nowrap;
   }
 }
 
@@ -597,4 +611,3 @@ html[data-lang='zh'] .lang-zh {
     scroll-behavior: auto !important;
   }
 }
-
