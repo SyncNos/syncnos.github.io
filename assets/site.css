@@ -372,6 +372,16 @@ a:hover {
   }
 }
 
+.sn-attention {
+  padding-top: 112px;
+}
+
+@media (max-width: 980px) {
+  .sn-attention {
+    padding-top: 96px;
+  }
+}
+
 .section-title {
   font-family: var(--ui-font);
   font-size: var(--h2-size);

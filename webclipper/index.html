@@ -52,36 +52,29 @@
         </nav>
       </div>
     </header>
-
-    <main>
-      <section class="hero">
+    <main class="sn-main">
+      <section class="sn-section hero sn-attention" id="attention">
         <div class="container hero-grid">
-          <div>
-            <div class="crumbs">
-              <a href="../">
-                <span class="lang-en">Home</span>
-                <span class="lang-zh">首页</span>
-              </a>
-              <span aria-hidden="true"> / </span>
-              <span>
-                <span class="lang-en">WebClipper</span>
-                <span class="lang-zh">WebClipper</span>
-              </span>
-            </div>
-
-            <h1 style="margin-top: 10px">
-              <span class="lang-en">SyncNos WebClipper</span>
-              <span class="lang-zh">SyncNos WebClipper</span>
+          <div class="hero-copy">
+            <h1>
+              <span class="lang-en"
+                >WebClipper that captures<span class="inline-type-image" aria-hidden="true"
+                  ><img src="https://picsum.photos/seed/syncnos-webclipper-inline/320/200" alt="" /></span
+                > without lock-in.</span
+              >
+              <span class="lang-zh"
+                >WebClipper：采集<span class="inline-type-image" aria-hidden="true"
+                  ><img src="https://picsum.photos/seed/syncnos-webclipper-inline/320/200" alt="" /></span
+                >，但不绑架。</span
+              >
             </h1>
 
             <p class="lede">
               <span class="lang-en"
-                >Capture AI chats, web articles, and video transcripts—silently in the background. Store locally first,
-                then sync or export on your terms.</span
+                >Capture AI chats, long articles, and video transcripts silently in the background. Store locally first, then sync or export
+                when you decide.</span
               >
-              <span class="lang-zh"
-                >后台静默采集 AI 对话、网页长文与视频字幕：先落浏览器本地事实源，再由你决定同步或导出。</span
-              >
+              <span class="lang-zh">后台静默采集 AI 对话、网页长文与视频字幕：先落本地，再由你决定同步或导出。</span>
             </p>
 
             <div class="hero-actions">
@@ -89,117 +82,325 @@
                 <span class="lang-en">View on GitHub</span>
                 <span class="lang-zh">去 GitHub 看源码</span>
               </a>
-              <a class="sn-btn" href="https://github.com/SyncNos/SyncNos-Webclipper#readme" target="_blank" rel="noreferrer">
+              <a class="sn-btn sn-btn--ghost" href="https://github.com/SyncNos/SyncNos-Webclipper#readme" target="_blank" rel="noreferrer">
                 <span class="lang-en">Read README</span>
                 <span class="lang-zh">看 README</span>
               </a>
             </div>
-
-            <div class="kpis" aria-label="Highlights">
-              <div class="kpi">
-                <div class="label">
-                  <span class="lang-en">LOCAL-FIRST</span>
-                  <span class="lang-zh">本地优先</span>
-                </div>
-                <div class="value">
-                  <span class="lang-en">Everything lands in IndexedDB first.</span>
-                  <span class="lang-zh">所有内容先落 IndexedDB。</span>
-                </div>
-              </div>
-              <div class="kpi">
-                <div class="label">
-                  <span class="lang-en">OUTPUT</span>
-                  <span class="lang-zh">输出</span>
-                </div>
-                <div class="value">
-                  <span class="lang-en">Notion / Obsidian / Feishu · Markdown / Zip.</span>
-                  <span class="lang-zh">Notion / Obsidian / 飞书 · Markdown / Zip。</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="proof" aria-label="Screenshots">
-            <div class="stack">
-              <img class="shot primary" src="../assets/popup-screenshots.png" alt="WebClipper popup screenshots" />
-              <img class="shot secondary" src="../assets/setting-screenshots.png" alt="Settings screenshots" />
+          <div class="hero-media" aria-label="Hero image">
+            <div class="hero-media-frame">
+              <img class="hero-media-bg" src="https://picsum.photos/seed/syncnos-webclipper/1920/1400" alt="Atmospheric image" />
+              <div class="hero-media-proof">
+                <img class="shot" src="../assets/popup-screenshots.png" alt="WebClipper popup screenshot" />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="features">
-        <div class="container grid-2">
-          <div>
+      <section class="sn-section sn-interest" id="interest" aria-label="Interest">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="lang-en">Capture first, decide later.</span>
+            <span class="lang-zh">先采集，后决策。</span>
+          </h2>
+          <p class="muted" style="margin: 0 0 18px; max-width: 78ch">
+            <span class="lang-en">A personal timeline of what you asked, read, and watched—stored locally by default.</span>
+            <span class="lang-zh">把你问过、读过、看过的沉淀成个人时间线，并默认本地优先。</span>
+          </p>
+
+          <div class="sn-bento" aria-label="Key features">
+            <article class="bento-card bento-a" aria-label="Background capture">
+              <div class="bento-media">
+                <img class="bento-img" src="../assets/setting-screenshots.png" alt="WebClipper settings screenshot" />
+              </div>
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Background capture, minimal friction.</span>
+                  <span class="lang-zh">后台采集，几乎无摩擦。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">Supported sources get captured quietly—so your workflow stays uninterrupted.</span>
+                  <span class="lang-zh">支持的平台会被安静采集，不打断你的工作流。</span>
+                </div>
+                <div class="bento-actions">
+                  <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Webclipper" target="_blank" rel="noreferrer">
+                    <span class="lang-en">GitHub</span>
+                    <span class="lang-zh">GitHub</span>
+                  </a>
+                  <a class="sn-btn" href="../">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">首页</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card bento-b" aria-label="AI chats">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">AI chat capture.</span>
+                  <span class="lang-zh">AI 对话采集。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">Auto-capture supported platforms in the background.</span>
+                  <span class="lang-zh">后台自动采集主流平台对话。</span>
+                </div>
+              </div>
+              <div class="bento-media">
+                <img class="bento-img" src="https://picsum.photos/seed/syncnos-chats/1200/800" alt="Abstract image" />
+              </div>
+            </article>
+
+            <article class="bento-card bento-c" aria-label="Articles and transcripts">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Articles and transcripts.</span>
+                  <span class="lang-zh">长文与字幕。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">Extract readable content and keep references intact.</span>
+                  <span class="lang-zh">提取可读正文，并保留引用上下文。</span>
+                </div>
+              </div>
+              <div class="bento-media">
+                <img class="bento-img" src="https://picsum.photos/seed/syncnos-transcripts/1200/800" alt="Abstract image" />
+              </div>
+            </article>
+
+            <article class="bento-card bento-d" aria-label="Ownership and output">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Ownership stays with you.</span>
+                  <span class="lang-zh">数据归你。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">Local-first storage, then sync/export paths that remain simple.</span>
+                  <span class="lang-zh">先落本地，再用清晰的同步/导出路径把数据带走。</span>
+                </div>
+                <div class="bento-kpis" aria-label="Key claims">
+                  <div class="bento-kpi">
+                    <div class="k">
+                      <span class="lang-en">LOCAL-FIRST</span>
+                      <span class="lang-zh">本地优先</span>
+                    </div>
+                    <div class="v">
+                      <span class="lang-en">IndexedDB is the first stop.</span>
+                      <span class="lang-zh">IndexedDB 是第一站。</span>
+                    </div>
+                  </div>
+                  <div class="bento-kpi">
+                    <div class="k">
+                      <span class="lang-en">OUTPUT</span>
+                      <span class="lang-zh">输出</span>
+                    </div>
+                    <div class="v">
+                      <span class="lang-en">Notion / Obsidian / Feishu · Markdown / Zip.</span>
+                      <span class="lang-zh">Notion / Obsidian / 飞书 · Markdown / Zip。</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="sn-marquee" aria-label="Principles">
+            <div class="marquee-track" aria-label="Scrolling marquee">
+              <div class="marquee-group">
+                <span class="marquee-item">Capture</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Local-first</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Exportable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Auditable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Incremental sync</span><span class="marquee-dot" aria-hidden="true"></span>
+              </div>
+              <div class="marquee-group" aria-hidden="true">
+                <span class="marquee-item">Capture</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Local-first</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Exportable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Auditable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Incremental sync</span><span class="marquee-dot" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sn-accordions" aria-label="Deep dive">
+            <div class="section-title" style="margin: 26px 0 14px">
+              <span class="lang-en">From capture to archive.</span>
+              <span class="lang-zh">从采集到归档。</span>
+            </div>
+
+            <div class="h-accordions" data-active-index="0">
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Chats</span>
+                  <span class="lang-zh">对话</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Capture conversations without changing how you use the tools.</span>
+                    <span class="lang-zh">不改变使用方式，把对话留下。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-wc-chats/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Articles</span>
+                  <span class="lang-zh">长文</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Readable content, with references preserved for later.</span>
+                    <span class="lang-zh">可读正文，并保留引用。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-wc-articles/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Transcripts</span>
+                  <span class="lang-zh">字幕</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Transcripts become searchable notes, not lost context.</span>
+                    <span class="lang-zh">字幕变成可搜索的笔记，而不是丢失的上下文。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-wc-transcripts/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Export</span>
+                  <span class="lang-zh">导出</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Markdown/Zip stays simple, so your archive stays yours.</span>
+                    <span class="lang-zh">Markdown / Zip 越简单，你的归档越像“你的”。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-wc-export/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section sn-desire" id="desire">
+        <div class="container sn-pin-split" data-motion="pin-split">
+          <div class="pin-left">
             <h2 class="section-title">
-              <span class="lang-en">What it does</span>
-              <span class="lang-zh">它做什么</span>
+              <span class="lang-en">A scroll-driven walkthrough.</span>
+              <span class="lang-zh">一段滚动式走读。</span>
             </h2>
-            <p class="muted" style="margin: 0; max-width: 72ch">
-              <span class="lang-en"
-                >WebClipper is designed for “capture first, decide later”—a personal timeline of what you asked, read,
-                and watched.</span
-              >
-              <span class="lang-zh">WebClipper 为“先采集、后决策”而生：把你问过、读过、看过的沉淀成个人时间线。</span>
+            <p class="muted" style="margin: 0; max-width: 68ch">
+              <span class="lang-en">How capture becomes an archive: step by step, without hiding the details.</span>
+              <span class="lang-zh">采集如何变成归档：一步一步展开，不藏细节。</span>
             </p>
           </div>
-          <ul class="list" aria-label="Feature list">
-            <li>
-              <div class="t">
-                <span class="lang-en">AI chat capture</span>
-                <span class="lang-zh">AI 对话采集</span>
-              </div>
-              <div class="d">
-                <span class="lang-en">Auto-capture supported platforms in the background.</span>
-                <span class="lang-zh">后台自动采集主流平台对话。</span>
-              </div>
-            </li>
-            <li>
-              <div class="t">
-                <span class="lang-en">Web article clipping</span>
-                <span class="lang-zh">网页长文剪藏</span>
-              </div>
-              <div class="d">
-                <span class="lang-en">Extract title, author, publish date, and readable body.</span>
-                <span class="lang-zh">提取标题、作者、发布日期与正文内容。</span>
-              </div>
-            </li>
-            <li>
-              <div class="t">
-                <span class="lang-en">Video transcripts</span>
-                <span class="lang-zh">视频字幕</span>
-              </div>
-              <div class="d">
-                <span class="lang-en">Capture loaded transcripts from YouTube / Bilibili.</span>
-                <span class="lang-zh">采集 YouTube / B站 已加载字幕。</span>
-              </div>
-            </li>
-          </ul>
+
+          <div class="pin-right" aria-label="Scroll gallery">
+            <div class="pin-gallery">
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="../assets/popup-screenshots.png" alt="WebClipper popup screenshot" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Capture starts where you already are.</span>
+                  <span class="lang-zh">采集从你已经在用的地方开始。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="../assets/setting-screenshots.png" alt="WebClipper settings screenshot" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Local-first storage keeps it yours.</span>
+                  <span class="lang-zh">本地优先，数据更像“你的”。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-wc-step-1/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Normalize to stay exportable.</span>
+                  <span class="lang-zh">规范化，才更可导出。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-wc-step-2/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Incremental sync keeps it clean.</span>
+                  <span class="lang-zh">增量同步保持干净。</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="footer" role="contentinfo">
-        <div class="container footer-inner">
-          <div class="brand" aria-label="Brand footer">
-            <div class="brand-mark" aria-hidden="true" style="width: 24px; height: 24px">
-              <img src="../assets/icon-128.png" alt="" />
+      <section class="sn-section sn-action" id="action">
+        <div class="container">
+          <div class="card" style="padding: 22px; display: grid; gap: 10px; align-items: start">
+            <div style="font-size: 18px; font-weight: 950; letter-spacing: -0.01em">
+              <span class="lang-en">Audit the repo, then ship your workflow.</span>
+              <span class="lang-zh">先审计仓库，再把工作流跑起来。</span>
             </div>
-            <div>
-              <div class="brand-title" style="font-size: 13px">SyncNos</div>
-              <div class="brand-subtitle">
-                <span class="lang-en">WebClipper · Local-first by default</span>
-                <span class="lang-zh">WebClipper · 默认本地优先</span>
-              </div>
+            <div class="muted" style="max-width: 76ch">
+              <span class="lang-en">WebClipper stays open source and local-first. Verify the behavior, then decide how you use it.</span>
+              <span class="lang-zh">WebClipper 坚持开源与本地优先：你先验证，再决定如何使用。</span>
             </div>
-          </div>
-          <div class="fineprint">
-            <span class="lang-en">SyncNos is open source. Verify everything on GitHub.</span>
-            <span class="lang-zh">SyncNos 是开源项目：欢迎在 GitHub 上审计与验证。</span>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px">
+              <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Webclipper" target="_blank" rel="noreferrer">
+                <span class="lang-en">Open GitHub</span>
+                <span class="lang-zh">打开 GitHub</span>
+              </a>
+              <a class="sn-btn" href="../">
+                <span class="lang-en">Back to home</span>
+                <span class="lang-zh">返回首页</span>
+              </a>
+            </div>
           </div>
         </div>
+
+        <footer class="footer" role="contentinfo">
+          <div class="container footer-inner">
+            <div class="brand" aria-label="Brand footer">
+              <div class="brand-mark" aria-hidden="true" style="width: 24px; height: 24px">
+                <img src="../assets/icon-128.png" alt="" />
+              </div>
+              <div>
+                <div class="brand-title" style="font-size: 13px">SyncNos</div>
+                <div class="brand-subtitle">
+                  <span class="lang-en">WebClipper · Local-first by default</span>
+                  <span class="lang-zh">WebClipper · 默认本地优先</span>
+                </div>
+              </div>
+            </div>
+            <div class="fineprint">
+              <span class="lang-en">SyncNos is open source. Verify everything on GitHub.</span>
+              <span class="lang-zh">SyncNos 是开源项目：欢迎在 GitHub 上审计与验证。</span>
+            </div>
+          </div>
+        </footer>
       </section>
     </main>
 
-    <script src="../assets/site.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script defer src="../assets/motion.js"></script>
+    <script defer src="../assets/site.js"></script>
   </body>
 </html>
