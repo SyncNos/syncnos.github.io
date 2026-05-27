@@ -50,31 +50,25 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero">
+    <main class="sn-main">
+      <section class="sn-section hero sn-attention" id="attention">
         <div class="container hero-grid">
-          <div>
-            <div class="crumbs">
-              <a href="../">
-                <span class="lang-en">Home</span>
-                <span class="lang-zh">首页</span>
-              </a>
-              <span aria-hidden="true"> / </span>
-              <span>
-                <span class="lang-en">Health</span>
-                <span class="lang-zh">Health</span>
-              </span>
-            </div>
-
-            <h1 style="margin-top: 10px">
-              <span class="lang-en">SyncNos Health</span>
-              <span class="lang-zh">SyncNos Health</span>
+          <div class="hero-copy">
+            <h1>
+              <span class="lang-en"
+                >Apple clients<span class="inline-type-image" aria-hidden="true"
+                  ><img src="https://picsum.photos/seed/syncnos-health-inline/320/200" alt="" /></span
+                > for the SyncNos workflow.</span
+              >
+              <span class="lang-zh"
+                >SyncNos 的 Apple 客户端<span class="inline-type-image" aria-hidden="true"
+                  ><img src="https://picsum.photos/seed/syncnos-health-inline/320/200" alt="" /></span
+                >预告线。</span
+              >
             </h1>
 
             <p class="lede">
-              <span class="lang-en"
-                >A preview track for SyncNos on Apple platforms. Early stage—GitHub is the source of truth.</span
-              >
+              <span class="lang-en">A preview track for SyncNos on Apple platforms. Early stage—GitHub is the source of truth.</span>
               <span class="lang-zh">SyncNos 的 Apple 平台预告产品线。当前为早期阶段：进展以 GitHub 为准。</span>
             </p>
 
@@ -83,83 +77,315 @@
                 <span class="lang-en">View on GitHub</span>
                 <span class="lang-zh">去 GitHub 看源码</span>
               </a>
-              <a class="sn-btn" href="https://github.com/SyncNos/SyncNos-Apple#readme" target="_blank" rel="noreferrer">
+              <a class="sn-btn sn-btn--ghost" href="https://github.com/SyncNos/SyncNos-Apple#readme" target="_blank" rel="noreferrer">
                 <span class="lang-en">Read README</span>
                 <span class="lang-zh">看 README</span>
               </a>
             </div>
+          </div>
 
-            <div class="kpis" aria-label="Status">
-              <div class="kpi">
-                <div class="label">
-                  <span class="lang-en">STATUS</span>
-                  <span class="lang-zh">状态</span>
-                </div>
-                <div class="value">
-                  <span class="lang-en">Preview</span>
-                  <span class="lang-zh">预告</span>
-                </div>
-              </div>
-              <div class="kpi">
-                <div class="label">
-                  <span class="lang-en">PLATFORMS</span>
-                  <span class="lang-zh">平台</span>
-                </div>
-                <div class="value">
-                  <span class="lang-en">Apple clients</span>
-                  <span class="lang-zh">Apple 客户端</span>
-                </div>
+          <div class="hero-media" aria-label="Hero image">
+            <div class="hero-media-frame">
+              <img class="hero-media-bg" src="https://picsum.photos/seed/syncnos-health/1920/1400" alt="Atmospheric image" />
+              <div class="hero-media-proof">
+                <img class="shot" src="../assets/icon-128.png" alt="SyncNos icon" />
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="proof" aria-label="Preview card">
-            <article class="card" style="padding: 14px">
-              <div class="badge">
-                <span class="lang-en">Preview</span>
-                <span class="lang-zh">预告</span>
+      <section class="sn-section sn-interest" id="interest" aria-label="Interest">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="lang-en">What to expect</span>
+            <span class="lang-zh">你可以期待什么</span>
+          </h2>
+          <p class="muted" style="margin: 0 0 18px; max-width: 78ch">
+            <span class="lang-en">A minimal, local-first client experience—built to match the same capture-to-archive workflow.</span>
+            <span class="lang-zh">一个克制的、本地优先的客户端体验，匹配同一套采集到归档的流程。</span>
+          </p>
+
+          <div class="sn-bento" aria-label="Key features">
+            <article class="bento-card bento-a" aria-label="Preview track">
+              <div class="bento-media">
+                <img class="bento-img" src="https://picsum.photos/seed/syncnos-health-apple/1600/1000" alt="Abstract image" />
               </div>
-              <h2 class="section-title" style="margin-top: 12px">
-                <span class="lang-en">Roadmap</span>
-                <span class="lang-zh">路线图</span>
-              </h2>
-              <p class="muted" style="margin: 0; max-width: 70ch">
-                <span class="lang-en">This page stays intentionally minimal—follow the repo for milestones and releases.</span>
-                <span class="lang-zh">本页保持克制：里程碑与发布信息以仓库为准。</span>
-              </p>
-              <div class="hero-actions" style="margin-top: 14px">
-                <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Apple" target="_blank" rel="noreferrer">
-                  <span class="lang-en">GitHub</span>
-                  <span class="lang-zh">GitHub</span>
-                </a>
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Preview track, real repo.</span>
+                  <span class="lang-zh">预告线，但仓库是真。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">This page stays intentionally minimal. Milestones and releases live on GitHub.</span>
+                  <span class="lang-zh">本页保持克制：里程碑与发布信息以 GitHub 为准。</span>
+                </div>
+                <div class="bento-actions">
+                  <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Apple" target="_blank" rel="noreferrer">
+                    <span class="lang-en">GitHub</span>
+                    <span class="lang-zh">GitHub</span>
+                  </a>
+                  <a class="sn-btn" href="../">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-zh">首页</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card bento-b" aria-label="Apple platforms">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Apple platforms.</span>
+                  <span class="lang-zh">Apple 平台。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">A client experience that respects system conventions and accessibility.</span>
+                  <span class="lang-zh">尊重系统惯例，也尊重可访问性。</span>
+                </div>
+              </div>
+              <div class="bento-media">
+                <img class="bento-img" src="https://picsum.photos/seed/syncnos-health-platforms/1200/800" alt="Abstract image" />
+              </div>
+            </article>
+
+            <article class="bento-card bento-c" aria-label="Local-first">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Local-first, still auditable.</span>
+                  <span class="lang-zh">本地优先，也可审计。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">The same principle: verify behavior, then decide how to sync.</span>
+                  <span class="lang-zh">同一原则：先验证行为，再决定同步。</span>
+                </div>
+              </div>
+              <div class="bento-media">
+                <img class="bento-img" src="https://picsum.photos/seed/syncnos-health-local/1200/800" alt="Abstract image" />
+              </div>
+            </article>
+
+            <article class="bento-card bento-d" aria-label="Status">
+              <div class="bento-body">
+                <div class="bento-title">
+                  <span class="lang-en">Status and scope.</span>
+                  <span class="lang-zh">状态与范围。</span>
+                </div>
+                <div class="bento-desc muted">
+                  <span class="lang-en">Early stage. Follow the repo for updates.</span>
+                  <span class="lang-zh">早期阶段：关注仓库获取更新。</span>
+                </div>
+                <div class="bento-kpis" aria-label="Key claims">
+                  <div class="bento-kpi">
+                    <div class="k">
+                      <span class="lang-en">STATUS</span>
+                      <span class="lang-zh">状态</span>
+                    </div>
+                    <div class="v">
+                      <span class="lang-en">Preview</span>
+                      <span class="lang-zh">预告</span>
+                    </div>
+                  </div>
+                  <div class="bento-kpi">
+                    <div class="k">
+                      <span class="lang-en">PLATFORMS</span>
+                      <span class="lang-zh">平台</span>
+                    </div>
+                    <div class="v">
+                      <span class="lang-en">Apple clients</span>
+                      <span class="lang-zh">Apple 客户端</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section class="footer" role="contentinfo">
-        <div class="container footer-inner">
-          <div class="brand" aria-label="Brand footer">
-            <div class="brand-mark" aria-hidden="true" style="width: 24px; height: 24px">
-              <img src="../assets/icon-128.png" alt="" />
-            </div>
-            <div>
-              <div class="brand-title" style="font-size: 13px">SyncNos</div>
-              <div class="brand-subtitle">
-                <span class="lang-en">Health · Preview</span>
-                <span class="lang-zh">Health · 预告</span>
+          <div class="sn-marquee" aria-label="Principles">
+            <div class="marquee-track" aria-label="Scrolling marquee">
+              <div class="marquee-group">
+                <span class="marquee-item">Apple platforms</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Local-first</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Accessible</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Auditable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Preview</span><span class="marquee-dot" aria-hidden="true"></span>
+              </div>
+              <div class="marquee-group" aria-hidden="true">
+                <span class="marquee-item">Apple platforms</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Local-first</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Accessible</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Auditable</span><span class="marquee-dot" aria-hidden="true"></span>
+                <span class="marquee-item">Preview</span><span class="marquee-dot" aria-hidden="true"></span>
               </div>
             </div>
           </div>
-          <div class="fineprint">
-            <span class="lang-en">SyncNos is open source. Verify everything on GitHub.</span>
-            <span class="lang-zh">SyncNos 是开源项目：欢迎在 GitHub 上审计与验证。</span>
+
+          <div class="sn-accordions" aria-label="Deep dive">
+            <div class="section-title" style="margin: 26px 0 14px">
+              <span class="lang-en">Four pieces to keep it honest.</span>
+              <span class="lang-zh">四个点，让它更克制。</span>
+            </div>
+
+            <div class="h-accordions" data-active-index="0">
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Local-first</span>
+                  <span class="lang-zh">本地优先</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Default to local, then opt into sync.</span>
+                    <span class="lang-zh">默认本地，再选择同步。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-health-a1/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Accessible</span>
+                  <span class="lang-zh">可访问</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Respect system settings and motion preferences.</span>
+                    <span class="lang-zh">尊重系统设置与动效偏好。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-health-a2/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Minimal</span>
+                  <span class="lang-zh">克制</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Make the essential path fast.</span>
+                    <span class="lang-zh">让必要路径更快。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-health-a3/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+
+              <div class="ha-panel">
+                <button class="ha-trigger" type="button">
+                  <span class="lang-en">Auditable</span>
+                  <span class="lang-zh">可审计</span>
+                </button>
+                <div class="ha-content">
+                  <div class="ha-text muted">
+                    <span class="lang-en">Open source is the proof, not a slogan.</span>
+                    <span class="lang-zh">开源是证据，而不是口号。</span>
+                  </div>
+                  <img class="ha-img" src="https://picsum.photos/seed/syncnos-health-a4/1400/900" alt="Abstract image" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <section class="sn-section sn-desire" id="desire">
+        <div class="container sn-pin-split" data-motion="pin-split">
+          <div class="pin-left">
+            <h2 class="section-title">
+              <span class="lang-en">A scroll-driven preview.</span>
+              <span class="lang-zh">一段滚动式预览。</span>
+            </h2>
+            <p class="muted" style="margin: 0; max-width: 68ch">
+              <span class="lang-en">A feel for the direction—without pretending it is done.</span>
+              <span class="lang-zh">感受方向，但不假装已经完成。</span>
+            </p>
+          </div>
+
+          <div class="pin-right" aria-label="Scroll gallery">
+            <div class="pin-gallery">
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-health-step-1/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Fast, minimal surface.</span>
+                  <span class="lang-zh">更快、更克制的界面。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-health-step-2/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Local-first, readable flows.</span>
+                  <span class="lang-zh">本地优先，流程可读。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-health-step-3/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Sync and export stay optional.</span>
+                  <span class="lang-zh">同步与导出保持可选。</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sn-section sn-action" id="action">
+        <div class="container">
+          <div class="card" style="padding: 22px; display: grid; gap: 10px; align-items: start">
+            <div style="font-size: 18px; font-weight: 950; letter-spacing: -0.01em">
+              <span class="lang-en">Follow the repo for milestones.</span>
+              <span class="lang-zh">里程碑以仓库为准。</span>
+            </div>
+            <div class="muted" style="max-width: 76ch">
+              <span class="lang-en">This page is a preview. Watch GitHub for updates, milestones, and releases.</span>
+              <span class="lang-zh">此页为预告：请关注 GitHub 获取更新、里程碑与发布。</span>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px">
+              <a class="sn-btn sn-btn--filled" href="https://github.com/SyncNos/SyncNos-Apple" target="_blank" rel="noreferrer">
+                <span class="lang-en">Open GitHub</span>
+                <span class="lang-zh">打开 GitHub</span>
+              </a>
+              <a class="sn-btn" href="../">
+                <span class="lang-en">Back to home</span>
+                <span class="lang-zh">返回首页</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer" role="contentinfo">
+          <div class="container footer-inner">
+            <div class="brand" aria-label="Brand footer">
+              <div class="brand-mark" aria-hidden="true" style="width: 24px; height: 24px">
+                <img src="../assets/icon-128.png" alt="" />
+              </div>
+              <div>
+                <div class="brand-title" style="font-size: 13px">SyncNos</div>
+                <div class="brand-subtitle">
+                  <span class="lang-en">Health · Preview</span>
+                  <span class="lang-zh">Health · 预告</span>
+                </div>
+              </div>
+            </div>
+            <div class="fineprint">
+              <span class="lang-en">SyncNos is open source. Verify everything on GitHub.</span>
+              <span class="lang-zh">SyncNos 是开源项目：欢迎在 GitHub 上审计与验证。</span>
+            </div>
+          </div>
+        </footer>
+      </section>
     </main>
 
-    <script src="../assets/site.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script defer src="../assets/motion.js"></script>
+    <script defer src="../assets/site.js"></script>
   </body>
 </html>
