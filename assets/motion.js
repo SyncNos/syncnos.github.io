@@ -4,6 +4,24 @@
     reducedMotion: false,
   };
 
+  let overflowWarned = false;
+
+  function warnIfHorizontalOverflow() {
+    if (overflowWarned) return;
+    try {
+      const doc = document.documentElement;
+      if (doc && doc.scrollWidth > window.innerWidth + 1) {
+        overflowWarned = true;
+        console.warn('[SyncNos] Horizontal overflow detected', {
+          scrollWidth: doc.scrollWidth,
+          innerWidth: window.innerWidth,
+        });
+      }
+    } catch (_e) {
+      // ignore
+    }
+  }
+
   function prefersReducedMotion() {
     try {
       return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -147,6 +165,7 @@
       () => {
         try {
           ScrollTrigger.refresh();
+          warnIfHorizontalOverflow();
         } catch (_e) {
           // ignore
         }
@@ -164,6 +183,9 @@
 
     if (STATE.reducedMotion) return;
     bootGsap();
+
+    window.addEventListener('resize', () => requestAnimationFrame(warnIfHorizontalOverflow), { passive: true });
+    window.addEventListener('load', warnIfHorizontalOverflow, { once: true });
   }
 
   window.SyncNosMotion = Object.freeze({
