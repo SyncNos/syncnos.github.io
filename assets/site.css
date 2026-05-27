@@ -238,6 +238,13 @@ a:hover {
   font-size: 13px;
 }
 
+.nav-link:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-pill);
+}
+
 .lang-pill {
   display: inline-flex;
   align-items: center;
@@ -258,6 +265,11 @@ a:hover {
   font-weight: 900;
   border-radius: var(--radius-pill);
   cursor: pointer;
+}
+
+.lang-pill button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 .lang-pill button[aria-pressed='true'] {
