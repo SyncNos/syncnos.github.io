@@ -94,7 +94,53 @@
       });
     }
 
+    function bootGalleryScaleFade() {
+      const items = Array.from(document.querySelectorAll('.pin-gallery .gallery-item'));
+      if (items.length === 0) return;
+
+      ScrollTrigger.matchMedia({
+        '(min-width: 980px)': () => {
+          const timelines = [];
+
+          items.forEach((item) => {
+            const img = item.querySelector('.gallery-img');
+            const media = item.querySelector('.gallery-media');
+            if (!img || !media) return;
+
+            const tl = gsap.timeline({
+              defaults: { ease: 'none' },
+              scrollTrigger: {
+                trigger: item,
+                start: 'top 85%',
+                end: 'bottom 15%',
+                scrub: true,
+              },
+            });
+
+            tl.fromTo(img, { scale: 0.8, opacity: 0.2 }, { scale: 1, opacity: 1, duration: 0.5 }, 0);
+            tl.to(img, { opacity: 0.2, duration: 0.5 }, 0.5);
+
+            tl.fromTo(media, { '--gallery-dim': 0.35 }, { '--gallery-dim': 0.08, duration: 0.5 }, 0);
+            tl.to(media, { '--gallery-dim': 0.35, duration: 0.5 }, 0.5);
+
+            timelines.push(tl);
+          });
+
+          return () => {
+            timelines.forEach((tl) => {
+              try {
+                tl.kill();
+              } catch (_e) {
+                // ignore
+              }
+            });
+          };
+        },
+      });
+    }
+
     bootPinSplit();
+    bootGalleryScaleFade();
 
     window.addEventListener(
       'load',
