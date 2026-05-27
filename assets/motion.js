@@ -61,6 +61,26 @@
     });
   }
 
+  function smokeCheck() {
+    try {
+      console.assert(!!document.querySelector('header.sn-nav'), '[SyncNos] smoke: missing nav');
+      console.assert(!!document.querySelector('#attention'), '[SyncNos] smoke: missing attention');
+      console.assert(!!document.querySelector('#interest'), '[SyncNos] smoke: missing interest');
+      console.assert(!!document.querySelector('#desire'), '[SyncNos] smoke: missing desire');
+      console.assert(!!document.querySelector('#action'), '[SyncNos] smoke: missing action');
+
+      const doc = document.documentElement;
+      if (doc) {
+        console.assert(doc.scrollWidth <= window.innerWidth + 1, '[SyncNos] smoke: horizontal overflow', {
+          scrollWidth: doc.scrollWidth,
+          innerWidth: window.innerWidth,
+        });
+      }
+    } catch (_e) {
+      // ignore
+    }
+  }
+
   function bootGsap() {
     const gsap = window.gsap;
     const ScrollTrigger = window.ScrollTrigger;
@@ -180,6 +200,7 @@
     STATE.reducedMotion = prefersReducedMotion();
 
     bootAccordions();
+    smokeCheck();
 
     if (STATE.reducedMotion) return;
     bootGsap();
