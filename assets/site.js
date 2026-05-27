@@ -1,6 +1,14 @@
 (function () {
   const STORAGE_KEY = 'syncnos_landing_lang';
 
+  function prefersReducedMotion() {
+    try {
+      return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch (_e) {
+      return false;
+    }
+  }
+
   function inferLang() {
     const nav = String(navigator.language || '').toLowerCase();
     if (nav.startsWith('zh')) return 'zh';
@@ -32,11 +40,47 @@
     }
   }
 
+  function bootAccordions() {
+    const root = document.querySelector('.h-accordions');
+    if (!root) return;
+
+    const panels = Array.from(root.querySelectorAll('.ha-panel'));
+    if (panels.length === 0) return;
+
+    function setActiveIndex(index) {
+      const safeIndex = Math.max(0, Math.min(panels.length - 1, index));
+      root.dataset.activeIndex = String(safeIndex);
+      panels.forEach((panel, i) => {
+        const trigger = panel.querySelector('.ha-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', i === safeIndex ? 'true' : 'false');
+      });
+    }
+
+    const initial = Number.parseInt(String(root.dataset.activeIndex || '0'), 10);
+    setActiveIndex(Number.isFinite(initial) ? initial : 0);
+
+    panels.forEach((panel, index) => {
+      const trigger = panel.querySelector('.ha-trigger');
+
+      panel.addEventListener('pointerenter', () => setActiveIndex(index));
+
+      if (trigger) {
+        trigger.addEventListener('focus', () => setActiveIndex(index));
+        trigger.addEventListener('click', () => setActiveIndex(index));
+      }
+    });
+
+    if (prefersReducedMotion()) {
+      setActiveIndex(Number.parseInt(String(root.dataset.activeIndex || '0'), 10) || 0);
+    }
+  }
+
   function boot() {
     setLang(getLang());
     for (const el of document.querySelectorAll('[data-set-lang]')) {
       el.addEventListener('click', () => setLang(el.getAttribute('data-set-lang') || 'en'));
     }
+    bootAccordions();
   }
 
   if (document.readyState === 'loading') {
@@ -45,4 +89,3 @@
     boot();
   }
 })();
-
