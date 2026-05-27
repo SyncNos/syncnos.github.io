@@ -324,8 +324,8 @@
       </section>
 
       <section class="sn-section sn-desire" id="desire">
-        <div class="container split">
-          <div>
+        <div class="container sn-pin-split" data-motion="pin-split">
+          <div class="pin-left">
             <h2 class="section-title">
               <span class="lang-en">Show the workflow, not the claim.</span>
               <span class="lang-zh">给你看流程，而不是口号。</span>
@@ -336,18 +336,67 @@
               >
               <span class="lang-zh">这里会变成一段滚动叙事：采集、规范化、同步、导出，一步一步展开。</span>
             </p>
+
+            <div class="hero-actions" style="margin-top: 16px">
+              <a class="sn-btn sn-btn--filled" href="./webclipper/">
+                <span class="lang-en">See WebClipper</span>
+                <span class="lang-zh">看看 WebClipper</span>
+              </a>
+            </div>
           </div>
 
-          <div class="card" style="padding: 18px 18px 22px">
-            <div style="font-weight: 900; letter-spacing: -0.01em; margin-bottom: 10px">
-              <span class="lang-en">Motion space</span>
-              <span class="lang-zh">动效空间</span>
+          <div class="pin-right" aria-label="Scroll gallery">
+            <div class="pin-gallery">
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="./assets/setting-screenshots.png" alt="WebClipper settings screenshot" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Start with local storage. Decide sync later.</span>
+                  <span class="lang-zh">先落本地，再决定同步。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-step-1/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Capture quietly in the background.</span>
+                  <span class="lang-zh">在后台安静采集。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="./assets/popup-screenshots.png" alt="WebClipper popup screenshot" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Stay inspectable. Stay auditable.</span>
+                  <span class="lang-zh">可审计，可验证。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-step-2/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Normalize to keep export predictable.</span>
+                  <span class="lang-zh">规范化，让导出更可预期。</span>
+                </figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <div class="gallery-media">
+                  <img class="gallery-img" src="https://picsum.photos/seed/syncnos-step-3/1600/1000" alt="Abstract image" />
+                </div>
+                <figcaption class="gallery-cap muted">
+                  <span class="lang-en">Sync incrementally—avoid duplicates.</span>
+                  <span class="lang-zh">增量同步，不重复。</span>
+                </figcaption>
+              </figure>
             </div>
-            <div class="muted" style="margin-bottom: 14px">
-              <span class="lang-en">ScrollTrigger lands in P2. Layout stays stable in reduced-motion.</span>
-              <span class="lang-zh">P2 接入 ScrollTrigger；在 reduced-motion 下保持稳定静态布局。</span>
-            </div>
-            <img class="shot" src="https://picsum.photos/seed/syncnos-motion/1200/700" alt="Atmospheric placeholder image" />
           </div>
         </div>
       </section>

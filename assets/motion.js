@@ -54,6 +54,48 @@
       // ignore
     }
 
+    function getNavOffset() {
+      const el = document.querySelector('.sn-nav-inner');
+      if (!el) return 96;
+      const rect = el.getBoundingClientRect();
+      return Math.round(rect.height + 28);
+    }
+
+    function bootPinSplit() {
+      const container = document.querySelector('[data-motion="pin-split"]');
+      if (!container) return;
+
+      const left = container.querySelector('.pin-left');
+      const right = container.querySelector('.pin-right');
+      if (!left || !right) return;
+
+      ScrollTrigger.matchMedia({
+        '(min-width: 980px)': () => {
+          const trigger = ScrollTrigger.create({
+            trigger: container,
+            start: () => `top top+=${getNavOffset()}`,
+            end: () => {
+              const delta = Math.max(0, right.scrollHeight - left.offsetHeight);
+              return `+=${delta}`;
+            },
+            pin: left,
+            pinSpacing: true,
+            invalidateOnRefresh: true,
+          });
+
+          return () => {
+            try {
+              trigger.kill();
+            } catch (_e) {
+              // ignore
+            }
+          };
+        },
+      });
+    }
+
+    bootPinSplit();
+
     window.addEventListener(
       'load',
       () => {
