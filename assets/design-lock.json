@@ -1,7 +1,0 @@
-{
-  "seed": 42,
-  "heroArchitecture": "Editorial Split",
-  "typographyStack": "Satoshi",
-  "componentArchitectures": ["Inline Typography Images", "Infinite Marquee", "Horizontal Accordions"],
-  "gsapParadigms": ["Image Scale & Fade Scroll", "Scroll Pin Split"]
-}
