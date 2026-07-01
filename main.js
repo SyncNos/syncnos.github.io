@@ -66,15 +66,33 @@
       en: "SyncNos WebClipper — save AI chats, web articles and video transcripts to Notion, Obsidian or Feishu in one click. Open-source, local-first, your data stays yours.",
     },
   };
-  function setLang(l) {
+  var langNodes = document.querySelectorAll("[data-en]");
+  var reduceMotion = false;
+  try {
+    reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e) {}
+  // Per-character "chimney smoke" dissipation: fixed length + synchronized so
+  // the new language always arrives ~0.8s later, no matter how long the text.
+  var SMOKE_WINDOW = 260,
+    SMOKE_DUR = 520,
+    SMOKE_SWITCH = SMOKE_WINDOW + SMOKE_DUR + 40;
+
+  function captureZh() {
+    for (var i = 0; i < langNodes.length; i++) {
+      if (langNodes[i].getAttribute("data-zh") === null)
+        langNodes[i].setAttribute("data-zh", langNodes[i].innerHTML);
+    }
+  }
+
+  // Instantly apply a language (used on load and once the smoke has cleared).
+  function applyLang(l) {
     root.setAttribute("lang", l);
     document.title = l === "en" ? META.title.en : META.title.zh;
     var md = document.querySelector('meta[name="description"]');
     if (md)
       md.setAttribute("content", l === "en" ? META.desc.en : META.desc.zh);
-    var nodes = document.querySelectorAll("[data-en]");
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i];
+    for (var i = 0; i < langNodes.length; i++) {
+      var el = langNodes[i];
       if (el.getAttribute("data-zh") === null)
         el.setAttribute("data-zh", el.innerHTML);
       el.innerHTML =
@@ -85,6 +103,51 @@
     try {
       localStorage.setItem("lang", l);
     } catch (e) {}
+  }
+
+  // Shred a leaf element's visible text into per-char spans that each drift
+  // up-and-right, blur and fade — a wisp of chimney smoke.
+  function smokeDissipate(el) {
+    var chars = Array.from(el.textContent);
+    var n = chars.length;
+    el.innerHTML = "";
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < n; i++) {
+      var s = document.createElement("span");
+      s.className = "ch";
+      s.textContent = chars[i];
+      var dy = -(1.05 + Math.random() * 1.35);
+      s.style.setProperty(
+        "--dx",
+        (0.45 + Math.random() * 0.85).toFixed(3) + "em",
+      );
+      s.style.setProperty("--dy", dy.toFixed(3) + "em");
+      s.style.setProperty("--rot", (Math.random() * 15 - 3).toFixed(1) + "deg");
+      s.style.setProperty("--bl", (4.5 + Math.random() * 4).toFixed(1) + "px");
+      s.style.setProperty("--dur", SMOKE_DUR + "ms");
+      s.style.animationDelay =
+        (n > 1 ? (i / (n - 1)) * SMOKE_WINDOW : 0).toFixed(0) + "ms";
+      frag.appendChild(s);
+    }
+    el.appendChild(frag);
+    void el.offsetWidth; // reflow so rapid re-toggles restart cleanly
+    for (var j = 0; j < el.children.length; j++)
+      el.children[j].classList.add("away");
+  }
+
+  // Dissipate every leaf [data-en] in one synchronized window, then swap text.
+  function setLang(l) {
+    if (reduceMotion) {
+      applyLang(l);
+      return;
+    }
+    captureZh(); // preserve originals before we shred leaf text into spans
+    for (var i = 0; i < langNodes.length; i++) {
+      if (langNodes[i].children.length === 0) smokeDissipate(langNodes[i]);
+    }
+    setTimeout(function () {
+      applyLang(l);
+    }, SMOKE_SWITCH);
   }
   var langBtn = document.getElementById("lang");
   if (langBtn)
@@ -100,7 +163,8 @@
     ((navigator.language || "").toLowerCase().indexOf("zh") === 0
       ? "zh"
       : "en");
-  if (initLang === "en") setLang("en");
+  if (initLang === "en") applyLang("en");
+  else captureZh();
 
   // ---- Scroll reveal (native IntersectionObserver, graceful fallback) ----
   var targets = document.querySelectorAll(".reveal, .gather");
