@@ -40,9 +40,16 @@
     storeLinks[p].className = (storeLinks[p].getAttribute('data-store') === bkey) ? 'btn' : 'btn btn-ghost';
   }
 
-  // ---- Language (zh default in DOM, en in data-en) ----
+  // ---- Language (zh default in DOM, en in data-en; title + description swap too) ----
+  var META = {
+    title: { zh: 'SyncNos · 把读到的一切，存进你自己的知识库', en: 'SyncNos · Everything you read, saved to your own library' },
+    desc: { zh: 'SyncNos WebClipper —— 将 AI 对话、网页文章与视频字幕一键存入 Notion、Obsidian 或飞书。开源、本地优先，数据始终归你所有。', en: 'SyncNos WebClipper — save AI chats, web articles and video transcripts to Notion, Obsidian or Feishu in one click. Open-source, local-first, your data stays yours.' }
+  };
   function setLang(l) {
     root.setAttribute('lang', l);
+    document.title = (l === 'en') ? META.title.en : META.title.zh;
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', (l === 'en') ? META.desc.en : META.desc.zh);
     var nodes = document.querySelectorAll('[data-en]');
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i];

@@ -19,7 +19,7 @@
 h1,h2,h3,.sec-title,.big{text-wrap:balance}
 .lead,.card p,.dest p,.phase,.note,figcaption,.community,.safari-note{text-wrap:pretty}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.72;-webkit-font-smoothing:antialiased;transition:background .4s ease,color .4s ease}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.72;-webkit-font-smoothing:antialiased;transition:background .8s cubic-bezier(.76,0,.24,1),color .8s cubic-bezier(.76,0,.24,1)}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 b{font-weight:500}
