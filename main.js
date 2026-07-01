@@ -17,6 +17,29 @@
     });
   } catch (e) {}
 
+  // ---- Install: point the primary CTAs at the visitor's own browser store ----
+  var STORES = {
+    chrome: 'https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok',
+    edge: 'https://microsoftedge.microsoft.com/addons/detail/syncnosaiweb-clipper/ijkpghlfmkbjcgafapjcjahaikmnjncl',
+    firefox: 'https://addons.mozilla.org/firefox/addon/syncnos-webclipper/'
+  };
+  var ua = navigator.userAgent || '';
+  var bkey = /Firefox\//.test(ua) ? 'firefox' : (/Edg\//.test(ua) ? 'edge' : 'chrome');
+  var bname = { chrome: 'Chrome', edge: 'Edge', firefox: 'Firefox' }[bkey];
+  var installs = document.querySelectorAll('[data-install]');
+  for (var n = 0; n < installs.length; n++) {
+    installs[n].setAttribute('href', STORES[bkey]);
+    if (installs[n].getAttribute('data-install') === 'hero') {
+      installs[n].innerHTML = '安装到 ' + bname;
+      installs[n].setAttribute('data-en', 'Add to ' + bname);
+    }
+  }
+  // matching store solid in the footer; the other two stay one tap away
+  var storeLinks = document.querySelectorAll('[data-store]');
+  for (var p = 0; p < storeLinks.length; p++) {
+    storeLinks[p].className = (storeLinks[p].getAttribute('data-store') === bkey) ? 'btn' : 'btn btn-ghost';
+  }
+
   // ---- Language (zh default in DOM, en in data-en) ----
   function setLang(l) {
     root.setAttribute('lang', l);

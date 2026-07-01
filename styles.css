@@ -69,6 +69,10 @@ section{padding:92px 0}
 .sync{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .dest{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
 .dest .ico{height:38px;width:auto;margin:0 0 18px}
+[data-theme="dark"] .ico-invert{filter:invert(1)}
+.alt-install{margin:14px 0 0;font-size:13px}
+.alt-install a{color:var(--muted);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.alt-install a:hover{color:var(--ink);border-color:var(--line)}
 .dest h3{font-family:var(--serif);font-weight:600;font-size:19px;margin:0 0 8px}
 .dest p{margin:0;color:var(--muted);font-size:14px}
 .note{margin-top:24px;color:var(--muted);font-size:14px}

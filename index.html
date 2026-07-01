@@ -24,7 +24,7 @@
   <div class="nav-actions">
     <button id="lang" class="ghost-btn" aria-label="Switch language">EN</button>
     <button id="theme" class="ghost-btn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 000 18z" fill="currentColor"/></svg></button>
-    <a class="btn btn-sm" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok" data-en="Install">安装</a>
+    <a class="btn btn-sm" data-install="nav" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok" data-en="Install">安装</a>
   </div>
 </header>
 
@@ -34,9 +34,10 @@
     <h1 class="reveal" data-d="1" data-en="Everything you read, kept in a library that's yours.">读到的好东西，一键收进你自己的库。</h1>
     <p class="lead reveal" data-d="2" data-en="AI chats, web articles and video transcripts, saved to Notion, Obsidian or Feishu in one click. The code's open, and your data stays with you.">AI 对话、网页文章、视频字幕，一键存进 Notion、Obsidian、飞书。代码开源，数据先留在你自己手里。</p>
     <div class="cta-row reveal" data-d="3">
-      <a class="btn" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok" data-en="Install free">免费安装</a>
+      <a class="btn" data-install="hero" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok" data-en="Install free">免费安装</a>
       <a class="btn btn-ghost" href="https://github.com/chiimagnus/SyncNos" data-en="View source on GitHub">在 GitHub 查看源码</a>
     </div>
+    <p class="alt-install reveal" data-d="3" data-en="On another browser? Grab the Chrome, Edge or Firefox build below."><a href="#get">用别的浏览器？下面可选 Chrome / Edge / Firefox 版本</a></p>
     <div class="trust reveal" data-d="3">
       <span><i class="dot"></i>Chrome</span><span><i class="dot"></i>Edge</span><span><i class="dot"></i>Firefox</span>
       <span><i class="dot"></i><b data-en="open-source">开源</b></span><span><i class="dot"></i><b data-en="local-first">本地优先</b></span>
@@ -62,7 +63,7 @@
     <p class="sec-eyebrow reveal" data-en="Destinations">同步去向</p>
     <h2 class="sec-title reveal" data-en="Send it wherever you want.">存到哪，你自己挑。</h2>
     <div class="sync">
-      <div class="dest reveal"><img class="ico" src="assets/notion.svg" alt="Notion"><h3>Notion</h3><p data-en="One-click OAuth. It sets up separate databases for AI chats, web articles and videos.">OAuth 一键授权，自动建好库，AI 对话、网页、视频分开放。</p></div>
+      <div class="dest reveal"><img class="ico ico-invert" src="assets/notion.svg" alt="Notion"><h3>Notion</h3><p data-en="One-click OAuth. It sets up separate databases for AI chats, web articles and videos.">OAuth 一键授权，自动建好库，AI 对话、网页、视频分开放。</p></div>
       <div class="dest reveal" data-d="1"><img class="ico" src="assets/obsidian.svg" alt="Obsidian"><h3>Obsidian</h3><p data-en="Writes straight into your vault through the Local REST API, local to local, never over the network.">经 Local REST API 直接写进 vault，本地到本地，不走网络。</p></div>
       <div class="dest reveal" data-d="2"><img class="ico" src="assets/feishu.png" alt="Feishu"><h3 data-en="Feishu">飞书</h3><p data-en="One-click OAuth sync into Feishu Docs (DocX), organised by type.">OAuth 授权，一键同步到飞书云文档 DocX，按类型分文件夹。</p></div>
     </div>
@@ -114,10 +115,10 @@
 <footer class="foot">
   <div class="wrap">
     <p class="big reveal" data-en="Install it, and stop losing the good stuff you read.">装上它，读到的好东西就不会再丢了。</p>
-    <div class="store-row reveal" data-d="1">
-      <a class="btn" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok">Chrome</a>
-      <a class="btn btn-ghost" href="https://microsoftedge.microsoft.com/addons/detail/syncnosaiweb-clipper/ijkpghlfmkbjcgafapjcjahaikmnjncl">Edge</a>
-      <a class="btn btn-ghost" href="https://addons.mozilla.org/firefox/addon/syncnos-webclipper/">Firefox</a>
+    <div class="store-row reveal" data-d="1" id="get">
+      <a class="btn" data-store="chrome" href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok">Chrome</a>
+      <a class="btn btn-ghost" data-store="edge" href="https://microsoftedge.microsoft.com/addons/detail/syncnosaiweb-clipper/ijkpghlfmkbjcgafapjcjahaikmnjncl">Edge</a>
+      <a class="btn btn-ghost" data-store="firefox" href="https://addons.mozilla.org/firefox/addon/syncnos-webclipper/">Firefox</a>
     </div>
     <p class="safari-note reveal" data-d="1" data-en="Safari (macOS / iOS): build from source with Xcode.">Safari（macOS / iOS）：可用 Xcode 源码自建。</p>
     <div class="foot-links reveal">
