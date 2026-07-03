@@ -606,3 +606,113 @@ section {
         animation: none;
     }
 }
+
+/* Sponsors — angel supporters thank-you band */
+.sponsors .sec-title {
+    margin-bottom: 20px;
+}
+.sponsors-lead {
+    color: var(--muted);
+    font-size: clamp(16px, 1.8vw, 18px);
+    max-width: 52ch;
+    margin: 0 0 44px;
+}
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.sponsor {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px 30px;
+    box-shadow: var(--shadow);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sponsor-amt {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--sky);
+    margin-bottom: 16px;
+}
+.sponsor blockquote {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 18px;
+    flex: 1;
+}
+.sponsor-note {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 18px;
+    flex: 1;
+}
+.sponsor figcaption {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+}
+.sp-name {
+    color: var(--sky);
+    font-weight: 500;
+}
+a.sp-name {
+    border-bottom: 1px solid transparent;
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+a.sp-name:hover {
+    color: var(--ink);
+    border-color: var(--sky);
+}
+.sp-date {
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+.sponsors-total {
+    margin: 28px 0 0;
+    font-family: var(--serif);
+    font-size: clamp(16px, 1.9vw, 19px);
+    color: var(--ink);
+}
+.sponsors-names {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+.sponsors-names a {
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+.sponsors-names a:hover {
+    color: var(--ink);
+    border-color: var(--sky);
+}
+@media (max-width: 980px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 640px) {
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+}
