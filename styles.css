@@ -290,32 +290,6 @@ b {
     flex-wrap: wrap;
     align-items: center;
 }
-.trust {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 36px;
-    color: var(--muted);
-    font-size: 13px;
-    align-items: center;
-}
-.trust span {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-.trust b {
-    color: var(--ink);
-    font-weight: 400;
-}
-.dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--sky-2);
-    display: inline-block;
-}
-
 section {
     padding: 92px 0;
 }
