@@ -135,13 +135,57 @@
                         或飞书。开源、本地优先，数据始终归你所有。
                     </p>
                     <div class="cta-row reveal" data-d="3">
-                        <a
-                            class="btn"
-                            data-install="hero"
-                            href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok"
-                            data-en="Install free"
-                            >免费安装</a
-                        >
+                        <div class="install-split">
+                            <a
+                                class="btn install-main"
+                                data-install="hero"
+                                href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok"
+                                data-en="Install free"
+                                >免费安装</a
+                            >
+                            <button
+                                class="btn install-toggle"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                aria-label="其他浏览器版本"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M6 9l6 6 6-6"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                            <div class="install-menu" role="menu">
+                                <a
+                                    role="menuitem"
+                                    data-menu-store="chrome"
+                                    href="https://chromewebstore.google.com/detail/syncnos-webclipper/hmgjflllphdffeocddjjcfllifhejpok"
+                                    >Chrome</a
+                                >
+                                <a
+                                    role="menuitem"
+                                    data-menu-store="edge"
+                                    href="https://microsoftedge.microsoft.com/addons/detail/syncnosaiweb-clipper/ijkpghlfmkbjcgafapjcjahaikmnjncl"
+                                    >Edge</a
+                                >
+                                <a
+                                    role="menuitem"
+                                    data-menu-store="firefox"
+                                    href="https://addons.mozilla.org/firefox/addon/syncnos-webclipper/"
+                                    >Firefox</a
+                                >
+                            </div>
+                        </div>
                         <a
                             class="btn btn-ghost"
                             href="https://github.com/SyncNos/SyncNos-Webclipper"
@@ -149,27 +193,10 @@
                             >在 GitHub 查看源码</a
                         >
                     </div>
-                    <p
-                        class="alt-install reveal"
-                        data-d="3"
-                        data-en="Using a different browser? Choose the Chrome, Edge or Firefox build below."
-                    >
-                        <a href="#get"
-                            >使用其他浏览器？可在下方选择 Chrome / Edge /
-                            Firefox 版本。</a
-                        >
-                    </p>
                     <div class="trust reveal" data-d="3">
                         <span><i class="dot"></i>Chrome</span
                         ><span><i class="dot"></i>Edge</span
                         ><span><i class="dot"></i>Firefox</span>
-                        <span
-                            ><i class="dot"></i
-                            ><b data-en="open-source">开源</b></span
-                        ><span
-                            ><i class="dot"></i
-                            ><b data-en="local-first">本地优先</b></span
-                        >
                     </div>
                 </div>
             </section>

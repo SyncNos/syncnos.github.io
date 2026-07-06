@@ -46,6 +46,32 @@
       installs[n].setAttribute("data-en", "Add to " + bname);
     }
   }
+
+  // ---- Install split: caret reveals the OTHER browsers (current one is the main button) ----
+  var split = document.querySelector(".install-split");
+  var splitToggle = document.querySelector(".install-toggle");
+  if (split && splitToggle) {
+    var menuItems = split.querySelectorAll("[data-menu-store]");
+    for (var q = 0; q < menuItems.length; q++) {
+      if (menuItems[q].getAttribute("data-menu-store") === bkey)
+        menuItems[q].style.display = "none";
+    }
+    function closeSplit() {
+      split.classList.remove("open");
+      splitToggle.setAttribute("aria-expanded", "false");
+    }
+    splitToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = split.classList.toggle("open");
+      splitToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", function (e) {
+      if (!split.contains(e.target)) closeSplit();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeSplit();
+    });
+  }
   // matching store solid in the footer; the other two stay one tap away
   var storeLinks = document.querySelectorAll("[data-store]");
   for (var p = 0; p < storeLinks.length; p++) {
